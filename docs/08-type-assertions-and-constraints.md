@@ -222,10 +222,7 @@ const whoAmI = "I am a string" as unknown as number;
 
 We are telling TypeScript to treat `whoAmI` as type `unknown` first, then treat that `unknown` as `number`. That essentially is overriding the compiler's safety checks.
 
-Use `as unknown as` with extreme caution, only when you know more than the compiler. Wrongful use may cause runtime errors. Below is an example of a legitimate use case:
+Use `as unknown as` with extreme caution, only when you know more than the compiler. Wrongful use may cause runtime errors.
 
+<!-- Below is an example of a legitimate use case: -->
 <!-- todo -->
-
-```ts
-
-```

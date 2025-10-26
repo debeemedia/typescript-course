@@ -297,7 +297,7 @@ const person = {
 
 Notice how we used a literal type to define the `gender` property. As soon as you type "gender" while creating the "person" object, TypeScript suggests "Female" or "Male" to choose from. Auto-suggestion/completion is another understated benefit of using TypeScript.
 
-<!-- todo: clarify this. is it actually typescript that suggests or vscode -->
+> SideNote: A code editor like VS Code has built-in integration with the TypeScript Language Service. This integration provides auto-suggestions based on TypeScript’s type information.
 
 Note that while it is completely valid to use a type for an object, interfaces are typically used with objects and classes. This will be discussed later.
 
@@ -1329,7 +1329,7 @@ function getManagerDetails(manager: Manager): string {
 }
 ```
 
-Classes also implement interfaces. No surprise there, since classes are objects. This will be discussed in more detail under OOP. <!-- todo: link here -->
+Classes also implement interfaces. No surprise there, since classes are objects. This will be discussed in more detail under [OOP](06-oop.md?id=oop).
 
 What is the difference between `type alias` and `interface`?
-Both type aliases and interfaces can be used to define the structure of an object. Type aliases also define the structure of primitive types, which interfaces cannot do. ... <!-- todo: write more -->...
+Both type aliases and interfaces can be used to describe the structure of an object. Type aliases have more flexibility; they also describe any type: primitive, object, union, intersection, tuple etc.

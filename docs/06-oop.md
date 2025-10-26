@@ -334,13 +334,11 @@ console.log(manager.introduce()); // Output: I am Debs and I am the manager.
 
 So in practice, the abstract method is usually utilized in a concrete method in the abstract class, allowing for common behaviour to be shared while the subclasses fill in the details.
 
-<!-- todo: override keyword in classes -->
-
 <h3 id= 'classes-implementing-interfaces'>Classes Implementing Interfaces</h3>
 
 [Back to Index](_sidebar.md) | [Back to Section](#oop)
 
-Classes can extend other classes. Also, classes, like objects, can implement interfaces. <!-- todo: link to previous -->
+Classes can extend other classes. Also, classes, like [objects](05-type-system-essentials.md?id=interfaces), can implement interfaces.
 The interface provides a structure that the class must adhere to. Just like abstract properties and methods on abstract classes, every property and method on an interface is non-implementable. It is the duty of the class to implement them. All non-optional members (properties and methods) must be implemented:
 
 ```ts
@@ -463,16 +461,18 @@ So this is how TypeScript helps safeguard your code.
 
 The idea of interfaces is that we are viewing an object through a particular lens. We treat objects that implement an interface similarly and hide any complexity we don't need. This makes our program flexible.
 
-<!-- todo -->
+A class can implement multiple interfaces:
 
-A class can implement multiple interfaces...
+```ts
+class Person {}
+class Employee {}
+class Manager implements Person, Employee {}
+```
 
 <!-- todo: this section on classes implementing interfaces needs serious polishing -->
 
 <!-- todo -->
-
-When to use interface versus abstract class?
-...
+<!-- When to use interface versus abstract class? -->
 
 <h3 id= 'static-properties-methods'>Static Properties and Methods</h3>
 

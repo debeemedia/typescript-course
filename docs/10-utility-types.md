@@ -270,7 +270,3 @@ In the example above, `staffInfo` is a `Record<number, Employee>`, i.e an object
 - each value is an `Employee` (a combination of `Person` and `employeeId`)
 
 <!-- todo Lowercase utility type... and others-->
-
-<!-- todo: after utility types, Modules (Import/Export) -->
-
-<!-- typescript comments -->
