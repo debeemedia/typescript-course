@@ -1,6 +1,6 @@
 <h2 id= 'type-assertions-and-constraints'>TYPE ASSERTIONS AND CONSTRAINTS</h2>
 
-[Back to Index](../_sidebar.md)
+[Back to Index](_sidebar.md)
 
 <!-- todo: brief intro -->
 
@@ -53,7 +53,7 @@ TypeError: user.name.toUpperCase is not a function
 
 <h3 id= 'literal-assertions-with-as-const'>Literal Assertions with `as const`</h3>
 
-[Back to Index](../_sidebar.md) | [Back to Section](#type-assertions-and-constraints)
+[Back to Index](_sidebar.md) | [Back to Section](#type-assertions-and-constraints)
 
 `as const` is a special form of type assertion that freezes a value to its literal type. Whether it's a primitive value or an object or an array, it makes it deeply `readonly`. "deeply" means that for arrays and objects, nested elements are also `readonly`. "readonly" means that the value cannot be reassigned after initialization.
 
@@ -103,7 +103,7 @@ The same applies to objects. Each property in the object is now inferred as its 
 
 <h3 id= 'safer-constraints-with-satisfies'>Safer Constraints with `satisfies`</h3>
 
-[Back to Index](../_sidebar.md) | [Back to Section](#type-assertions-and-constraints)
+[Back to Index](_sidebar.md) | [Back to Section](#type-assertions-and-constraints)
 
 The `satisfies` keyword is a type constraint operator. It checks that a value conforms to a given type. If it doesn't, TypeScript raises an error; if it does, the value still keeps its inferred type. It is a way of telling the compiler: "Make sure this value is valid for this type".
 
@@ -204,7 +204,7 @@ We get safe autocomplete and no typos. This is because with `satisfies`, the com
 
 <h3 id= 'double-assertions-with-as-unknown-as'>Double Assertions with `as unknown as`</h3>
 
-[Back to Index](../_sidebar.md) | [Back to Section](#type-assertions-and-constraints)
+[Back to Index](_sidebar.md) | [Back to Section](#type-assertions-and-constraints)
 
 If `as` silences the compiler, `as unknown as` gaslights the compiler. It is a double assertion or double cast. It forcefully converts a value from one type to another via the intermediate `unknown` type. Sometimes, TypeScript does not allow a direct type assertion (using `as`), usually between two types that diverge too much or unrelated types that do not have a common structure.
 

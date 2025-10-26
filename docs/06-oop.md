@@ -1,6 +1,6 @@
 <h2 id= 'oop'>OOP</h2>
 
-[Back to Index](../_sidebar.md)
+[Back to Index](_sidebar.md)
 
 <h3 id= 'classes-access-modifiers'>Classes and Access Modifiers</h3>
 
@@ -214,7 +214,7 @@ In short, use "private" if you only care about TypeScript-level protection and d
 
 <h3 id= 'constructor-parameter-properties'>Constructor Parameter Properties</h3>
 
-[Back to Index](../_sidebar.md) | [Back to Section](#oop)
+[Back to Index](_sidebar.md) | [Back to Section](#oop)
 
 TypeScript gives us a shorthand for declaring and initializing class properties directly from the constructor. Instead of declaring the property first and then assigning it in the constructor, you can prefix the constructor parameter with an access modifier: `public`, `private` or `protected`.
 Example without shorthand:
@@ -243,7 +243,7 @@ Constructor parameter properties are great for simple classes; but for classes w
 
 <h3 id= 'abstract-classes'>Abstract Classes</h3>
 
-[Back to Index](../_sidebar.md) | [Back to Section](#oop)
+[Back to Index](_sidebar.md) | [Back to Section](#oop)
 
 An abstract class is a restricted class whose sole purpose is to act as a base class. It cannot be instantiated, that is, it cannot be used to create objects. It is meant to be extended by a subclass.
 If you try to instantiate it, TypeScript will throw an error:
@@ -338,7 +338,7 @@ So in practice, the abstract method is usually utilized in a concrete method in 
 
 <h3 id= 'classes-implementing-interfaces'>Classes Implementing Interfaces</h3>
 
-[Back to Index](../_sidebar.md) | [Back to Section](#oop)
+[Back to Index](_sidebar.md) | [Back to Section](#oop)
 
 Classes can extend other classes. Also, classes, like objects, can implement interfaces. <!-- todo: link to previous -->
 The interface provides a structure that the class must adhere to. Just like abstract properties and methods on abstract classes, every property and method on an interface is non-implementable. It is the duty of the class to implement them. All non-optional members (properties and methods) must be implemented:
@@ -476,7 +476,7 @@ When to use interface versus abstract class?
 
 <h3 id= 'static-properties-methods'>Static Properties and Methods</h3>
 
-[Back to Index](../_sidebar.md) | [Back to Section](#oop)
+[Back to Index](_sidebar.md) | [Back to Section](#oop)
 
 In JavaScript, `static` is used to define a property or method that belongs to the class, rather than an instance of the class. It is especially useful for shared values that are not dependent on the class instances. Nothing changes in TypeScript here, except the added type safety and access modifiers.
 
@@ -595,7 +595,7 @@ This shows how TypeScript enforces visibility for static members, something Java
 
 <h3 id= 'super-in-subclasses'>Super in Subclasses</h3>
 
-[Back to Index](../_sidebar.md) | [Back to Section](#oop)
+[Back to Index](_sidebar.md) | [Back to Section](#oop)
 
 When working with class inheritance, you will often see "super" in constructors. Again, it is a JavaScript feature, not specific to TypeScript alone. However, TypeScript offers you the added advantage of type safety.
 `super` calls the constructor of the base/parent class. In the subclass, you must call `super` in the constructor, otherwise TypeScript will throw a bunch of errors:

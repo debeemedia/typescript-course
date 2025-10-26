@@ -1,6 +1,6 @@
 <h2 id= 'type-system-essentials'>TYPE-SYSTEM ESSENTIALS</h2>
 
-[Back to Index](../_sidebar.md)
+[Back to Index](_sidebar.md)
 
 <h3 id= 'primitive-types'>Primitive Types</h3>
 
@@ -91,7 +91,7 @@ You cannot reassign a value to a constant variable and TypeScript enforces this.
 
 <h3 id= 'arrays-tuples'>Arrays and Tuples</h3>
 
-[Back to Index](../_sidebar.md) | [Back to Section](#type-system-essentials)
+[Back to Index](_sidebar.md) | [Back to Section](#type-system-essentials)
 
 An array is a list or collection of items.
 In TypeScript, you can specify the type of elements in an array e.g an array of strings, numbers, objects, or even arrays. You can also define arrays that allow multiple types, though it's recommended to maintain one type to simplify type narrowing later on.
@@ -161,7 +161,7 @@ So when should you use a tuple? Most likely when the element types and order mat
 
 <h3 id= 'literal-types'>Literal Types</h3>
 
-[Back to Index](../_sidebar.md) | [Back to Section](#type-system-essentials)
+[Back to Index](_sidebar.md) | [Back to Section](#type-system-essentials)
 
 A literal is a precise representation of a primitive type. We can have a number literal, boolean literal or string literal.
 String literals allow you to assign a value only from a specific set of string values to a variable:
@@ -211,7 +211,7 @@ The function return type (discussed later) is literally `true`, not just `boolea
 
 <h3 id= 'type-aliases'>Type Aliases</h3>
 
-[Back to Index](../_sidebar.md) | [Back to Section](#type-system-essentials)
+[Back to Index](_sidebar.md) | [Back to Section](#type-system-essentials)
 
 Before we discuss union types, let's quickly go over type aliases. Type aliases provide a way for you to create custom names for complex types, improving code readability and reusability.
 
@@ -303,7 +303,7 @@ Note that while it is completely valid to use a type for an object, interfaces a
 
 <h3 id= 'union-intersection'>Union and Intersection Types</h3>
 
-[Back to Index](../_sidebar.md) | [Back to Section](#type-system-essentials)
+[Back to Index](_sidebar.md) | [Back to Section](#type-system-essentials)
 
 Union and Intersection types allow us to combine types together. Let's revisit one of our examples under Type Aliases:
 
@@ -342,7 +342,7 @@ So what we have just done is use type aliases to define a `Person` type, a `Cont
 
 <h3 id= 'enums'>Enums</h3>
 
-[Back to Index](../_sidebar.md) | [Back to Section](#type-system-essentials)
+[Back to Index](_sidebar.md) | [Back to Section](#type-system-essentials)
 
 Enum stands for enumeration. It is a set of named constants:
 
@@ -445,7 +445,7 @@ console.log(ArticleStatus[2]); // Error: A const enum member can only be accesse
 
 <h3 id= 'string-literal-unions-objects'>String Literal Unions from Objects</h3>
 
-[Back to Index](../_sidebar.md) | [Back to Section](#type-system-essentials)
+[Back to Index](_sidebar.md) [Back to Section](#type-system-essentials)
 
 I want to demonstrate a lighter (lighter, in terms of not generating JavaScript code), and still type-sound, alternative to enums, but first, we will need to discuss `as const`, `typeof` and `keyof`, then see how we can combine all three.
 
@@ -587,7 +587,7 @@ This of course does not invalidate the use of enums. Enums are still very useful
 
 <h3 id= 'string-enums-vs-as-const-keyof-typeof'>String Enums Versus `as const` + `keyof typeof`</h3>
 
-[Back to Index](../_sidebar.md) | [Back to Section](#type-system-essentials)
+[Back to Index](_sidebar.md) | [Back to Section](#type-system-essentials)
 
 Let's compare two examples, one with string enum and the other with `as const` + `keyof typeof`
 
@@ -702,7 +702,7 @@ It's a TypeScript trick using template literal types to extract the enum's strin
 
 <h3 id= 'string-literal-unions-arrays'>String Literal Unions from Arrays</h3>
 
-[Back to Index](../_sidebar.md) | [Back to Section](#type-system-essentials)
+[Back to Index](_sidebar.md) | [Back to Section](#type-system-essentials)
 
 String literal union types can also be gotten from arrays. Let's look at two examples:
 
@@ -788,7 +788,7 @@ The extra step here is an additional index access for the field of interest i.e 
 
 <h3 id= 'optional-chaining-non-null'>Optional Chaining and Non-null Assertion</h3>
 
-[Back to Index](../_sidebar.md) | [Back to Section](#type-system-essentials)
+[Back to Index](_sidebar.md) | [Back to Section](#type-system-essentials)
 
 Optional chaining is denoted by the question mark symbol (?.), while Non-null assertion is denoted by the exclamation mark (!). These operators allow us to deal with null or undefined values in TypeScript. Optional chaining is actually available in both JavaScript and TypeScript but non-null assertion is available only in TypeScript.
 
@@ -872,7 +872,7 @@ Use "!" with caution and only when you are completely certain, based on your log
 
 <h3 id= 'function-types'>Function Types</h3>
 
-[Back to Index](../_sidebar.md) | [Back to Section](#type-system-essentials)
+[Back to Index](_sidebar.md) | [Back to Section](#type-system-essentials)
 
 <h4 id= 'basic-function-types'>Basic Function Types</h4>
 
@@ -1081,7 +1081,7 @@ Rest Parameters are a JavaScript feature (ES6), not exclusive to TypeScript. Typ
 
 <h3 id= 'special-types'>Special Types</h3>
 
-[Back to Index](../_sidebar.md) | [Back to Section](#type-system-essentials)
+[Back to Index](_sidebar.md) | [Back to Section](#type-system-essentials)
 
 TypeScript special types include `any`, `unknown`, `void` and `never` types.
 
@@ -1236,7 +1236,7 @@ We would get no warning, and a silent bug would be introduced.
 
 <h3 id= 'interfaces'>Interfaces</h3>
 
-[Back to Index](../_sidebar.md) | [Back to Section](#type-system-essentials)
+[Back to Index](_sidebar.md) | [Back to Section](#type-system-essentials)
 
 Interfaces allow you to enforce certain properties on objects or classes. They define the "shape" of an object and determine what properties or methods the object should have.
 To create an interface, use the keyword `interface`, followed by the name of the interface, then the block defining the shape the object should take:
