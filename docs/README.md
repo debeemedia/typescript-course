@@ -21,28 +21,28 @@ It’s written for:
 
 ---
 
-🧩 Why I Wrote This
+## 🧩 Why I Wrote This
 
 I wanted a single, readable resource that explains why TypeScript behaves the way it does — not just what the syntax is.
 Every example in this guide was tested in real TypeScript projects using frameworks like AdonisJS within Node.js environment, to stay practical and current.
 
 ---
 
-📦 How to Use
+## 📦 How to Use
 
 You can:
 
 - Clone this repo and read the Markdown files locally
 
-- View it directly on [GitHub](https://debeemedia.github.io/typescript-course/)
+- View it directly on [GitHub Pages](https://debeemedia.github.io/typescript-course/)
 
-- Or read the blog version (when published) here → coming soon
+- Or read the blog version when published (coming soon)
 
 Each major topic lives in its own `.md` file inside the `docs/` directory for easier navigation.
 
 ---
 
-✍️ Author
+## ✍️ Author
 
 Deborah Okeke
 
@@ -56,7 +56,7 @@ If you found this helpful, consider ⭐ starring the repo — it helps other dev
 
 ---
 
-🧭 License
+## 🧭 License
 
 This course is licensed under the [Creative Commons Attribution–NonCommercial 4.0 International License (CC BY-NC 4.0)](https://creativecommons.org/licenses/by-nc/4.0/).
 
