@@ -23,8 +23,8 @@ It’s written for:
 
 ## 🧩 Why I Wrote This
 
-I wanted a single, readable resource that explains why TypeScript behaves the way it does — not just what the syntax is.
-Every example in this guide was tested in real TypeScript projects using frameworks like AdonisJS within Node.js environment, to stay practical and current.
+I wanted a single, well-structured, readable, and understandable resource that explains why TypeScript behaves the way it does, not just what the syntax is.
+Every example was tested in real TypeScript projects, including AdonisJS apps in Node.js, to keep it practical and current.
 
 ---
 
