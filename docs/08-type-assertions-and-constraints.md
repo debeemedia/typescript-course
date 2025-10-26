@@ -184,7 +184,7 @@ console.log(greetings.halo);
 // No Error, but undefined at runtime!
 ```
 
-In the example, we used the [Record Utility Type](#record) to define an object type with string keys and string values. Because TypeScript expects that the keys are `string` (a wider type), we do not get autocomplete and it doesn't matter that we tried to access with a string property that does not exist in the object. Any string key is "valid". But `halo` does not exist on `greetings` and when we run the code, we get `undefined`. This is dangerous.
+In the example, we used the [Record Utility Type](10-utility-types.md?id=record) to define an object type with string keys and string values. Because TypeScript expects that the keys are `string` (a wider type), we do not get autocomplete and it doesn't matter that we tried to access with a string property that does not exist in the object. Any string key is "valid". But `halo` does not exist on `greetings` and when we run the code, we get `undefined`. This is dangerous.
 
 With `satisfies`:
 

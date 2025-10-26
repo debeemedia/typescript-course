@@ -2,7 +2,7 @@
 
 [Back to Index](_sidebar.md)
 
-In the section on [type aliases](#type-aliases), we demonstrated with an example how type aliases can help us reduce repetition in our code. Generics offer us that and even more. Generics allow reusability and flexibility when defining types, without sacrificing TypeScript's static typing.
+In the section on [type aliases](05-type-system-essentials.md?id=type-aliases), we demonstrated with an example how type aliases can help us reduce repetition in our code. Generics offer us that and even more. Generics allow reusability and flexibility when defining types, without sacrificing TypeScript's static typing.
 
 <h3 id= 'generic-functions'>Generic Functions</h3>
 

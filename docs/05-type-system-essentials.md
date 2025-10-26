@@ -495,7 +495,7 @@ TypeScript will now infer the type as:
 }
 ```
 
-So instead of inferring the values as just strings, TypeScript infers them as [literal types](#literal-types) i.e string literals. (`as const` is explained [here](#literal-assertions-with-as-const))
+So instead of inferring the values as just strings, TypeScript infers them as [literal types](05-type-system-essentials.md?id=literal-types) i.e string literals. (`as const` is explained [here](08-type-assertions-and-constraints.md?id=literal-assertions-with-as-const))
 
 `readonly` means that the properties are read-only, so you cannot accidentally change them:
 
@@ -512,7 +512,7 @@ ArticleStatus.C = "Finished"; // Error: Cannot assign to 'C' because it is a rea
 
 <h4 id = 'typeof'>"typeof"</h4>
 
-`typeof` (discussed in more detail [here](#typeof-type-guard)) is used to get the type of a value. It's as simple as this:
+`typeof` (discussed in more detail [here](07-type-narrowing-and-type-guards.md?id=typeof-type-guard)) is used to get the type of a value. It's as simple as this:
 
 ```ts
 const ArticleStatus = {
@@ -861,7 +861,7 @@ if (person.contact) {
 
 Non-null assertion, on the other hand, tells the compiler to ignore the possibility of the property being undefined or null.
 
-You basically use it to bypass TypeScript's null-check for that expression. It removes the warning at compile-time but does not affect runtime behaviour. If the value is actually null or undefined at runtime, your code will still crash. We already discussed the difference between runtime and compile-time [here](#introduction).
+You basically use it to bypass TypeScript's null-check for that expression. It removes the warning at compile-time but does not affect runtime behaviour. If the value is actually null or undefined at runtime, your code will still crash. We already discussed the difference between runtime and compile-time [here](01-introduction.md?id=introduction).
 
 ```ts
 const phoneNumber = person.contact!.phone_number;
@@ -1094,11 +1094,11 @@ let str: any = "hi";
 str = 3; // No error
 ```
 
-Use the "any' type sparingly: only when you are in a situation where you are not able to predict what the type of a variable is going to be, or when you could possibly receive many types. However, alternatives such as [union types](#union-intersection) or the "unknown" type are preferable.
+Use the "any' type sparingly: only when you are in a situation where you are not able to predict what the type of a variable is going to be, or when you could possibly receive many types. However, alternatives such as [union types](05-type-system-essentials.md?id=union-intersection) or the "unknown" type are preferable.
 
 <h4 id= 'unknown'>`unknown`</h4>
 
-The `unknown` type is a special type that is similar to the "any" type in that it can hold any value, but is more type-safe than the "any" type. This is because, rather than ignoring type checking, it forces you to perform what is known as type narrowing which involves checking the type before performing an operation. You could do this type narrowing with `typeof` or `instanceof` [type guards](#type-narrowing-and-type-guards), for example:
+The `unknown` type is a special type that is similar to the "any" type in that it can hold any value, but is more type-safe than the "any" type. This is because, rather than ignoring type checking, it forces you to perform what is known as type narrowing which involves checking the type before performing an operation. You could do this type narrowing with `typeof` or `instanceof` [type guards](07-type-narrowing-and-type-guards.md?id=type-narrowing-and-type-guards), for example:
 
 ```ts
 let myVar: unknown = 1;
@@ -1269,7 +1269,7 @@ const person: Person = {
 };
 ```
 
-Just as with [type aliases](#type-aliases), the object must implement all non-optional properties and methods on the interface, otherwise, TypeScript will throw an error:
+Just as with [type aliases](05-type-system-essentials.md?id=type-aliases), the object must implement all non-optional properties and methods on the interface, otherwise, TypeScript will throw an error:
 
 ```ts
 const person: Person = {

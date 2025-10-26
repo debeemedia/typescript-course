@@ -77,7 +77,7 @@ person.email = "noreply@person.com";
 // Error: Cannot assign to 'email' because it is a read-only property.
 ```
 
-Of course you can access the properties; you just cannot reassign them. But this only applies to the top-level properties. Unlike [`as const`](#literal-assertions-with-as-const) which can recursively make an object's properties readonly, `Readonly` utility type has a shallow effect:
+Of course you can access the properties; you just cannot reassign them. But this only applies to the top-level properties. Unlike [`as const`](08-type-assertions-and-constraints.md?id=literal-assertions-with-as-const) which can recursively make an object's properties readonly, `Readonly` utility type has a shallow effect:
 
 ```ts
 interface Person {
