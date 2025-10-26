@@ -1,6 +1,6 @@
 <h2 id= 'modules'>MODULES</h2>
 
-[Back to Index](./_sidebar.md)
+[Back to Index](_sidebar.md)
 
 A module is a file containing code that can be exported for use in other files. In a large codebase, we can't have all the code in one file; we'd typically have hundreds or thousands of files. Modules allow you to organise and manage your code in smaller pieces.
 
@@ -53,7 +53,7 @@ export class Employee implements Person {}
 
 <h3 id= 'imports'>Imports</h3>
 
-[Back to Index](./_sidebar.md) | [Back to Section](#modules)
+[Back to Index](_sidebar.md) | [Back to Section](#modules)
 
 Importing code is the second step to using it in another file. You use the `import` keyword. To import something that was exported as a named export, you use the name that was used to export it. You also specify the path to the file from where it was exported. Create another file and try to import the exported code in your `practice.ts` file.
 

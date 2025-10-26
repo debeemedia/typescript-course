@@ -1,6 +1,6 @@
 <h2 id= 'generics'>GENERICS</h2>
 
-[Back to Index](./_sidebar.md)
+[Back to Index](_sidebar.md)
 
 In the section on [type aliases](#type-aliases), we demonstrated with an example how type aliases can help us reduce repetition in our code. Generics offer us that and even more. Generics allow reusability and flexibility when defining types, without sacrificing TypeScript's static typing.
 
@@ -92,7 +92,7 @@ function returnArray<string>(param: string): string[];
 
 <h3 id= 'generic-classes'>Generic Classes</h3>
 
-[Back to Index](./_sidebar.md) | [Back to Section](#generics)
+[Back to Index](_sidebar.md) | [Back to Section](#generics)
 
 Let's look at a practical example of generics with classes to demonstrate its utility. Suppose we have this class that does not employ the use of generics. The class is used to manage staff members:
 
@@ -172,7 +172,7 @@ When instantiating the class, a type parameter is passed in, and it is that type
 
 <h3 id= 'generic-constraints-with-extends-keyword'>Generic Constraints with `extends` Keyword</h3>
 
-[Back to Index](./_sidebar.md) | [Back to Section](#generics)
+[Back to Index](_sidebar.md) | [Back to Section](#generics)
 
 Suppose we want to constrain the types that the generic class can use. Maybe a method in the class uses a particular property; if a type does not have that property, it could lead to runtime errors. To prevent that from happening, we restrict the allowed types with the `extends` keyword:
 
@@ -206,7 +206,7 @@ Here, `Intern` does not conform to the allowed types and so TypeScript raises an
 
 <h3 id= 'generic-default-type-parameter'>Generic Default Type Parameter</h3>
 
-[Back to Index](./_sidebar.md) | [Back to Section](#generics)
+[Back to Index](_sidebar.md) | [Back to Section](#generics)
 
 Generics can have default types e.g.
 
@@ -232,7 +232,7 @@ This allows you to avoid repeating the generic type in common scenarios, while s
 
 <h3 id= 'generics-with-keyof-operator'>Generics with `keyof` Operator</h3>
 
-[Back to Index](./_sidebar.md) | [Back to Section](#generics)
+[Back to Index](_sidebar.md) | [Back to Section](#generics)
 
 Let's look at a common trick with generics, object types and `keyof`:
 
