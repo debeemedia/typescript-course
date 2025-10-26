@@ -72,3 +72,4 @@
 - [MODULES](11-modules.md?id=modules)
   - [Exports](11-modules.md?id=exports)
   - [Imports](11-modules.md?id=imports)
+  - [Type Declaration Files](11-modules.md?id=type-declaration-files)

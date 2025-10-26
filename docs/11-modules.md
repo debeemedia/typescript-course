@@ -177,4 +177,170 @@ Not all imports are from relative paths. It could be an absolute import or a pat
 
 <!-- todo: more on this -->
 
-<!-- todo: declaration files d.ts -->
+<h3 id= 'type-declaration-files'>Type Declaration Files</h3>
+
+[Back to Index](_sidebar.md) | [Back to Section](#modules)
+
+A Type Declaration File is a TypeScript file that contains only type definitions, no actual code logic. It can be identified by its `.d.ts` extension. It gives the compiler information about existing JavaScript code. This is usually useful when importing a library that was written in plain JavaScript into a TypeScript codebase. The library author will usually provide a type declaration file so that TypeScript can know about the types of function arguments, their return values and the structure of objects within the library.
+
+Let's illustrate how it works with this mini setup. We'll be creating a simple library that sums all the numbers in an array.
+
+<b>Example 1. Declaring Types for a JavaScript Library</b>
+
+- Inside a new practice folder, create a folder called `lib`. Inside the library, create the JavaScript file called `sum.js` and a corresponding type declaration file for it `sum.d.ts`. Note that the files must have the same name "sum".
+
+- Export a function that sums all the numbers in an array from the `sum.js` file:
+
+```js
+exports.sumArray = function (arr) {
+  return arr.reduce((prev, curr) => prev + curr, 0);
+};
+```
+
+- Define types for the function in the `sum.d.ts` file:
+
+```ts
+export function sumArray(arr: number[]): num;
+```
+
+The function takes in an array of numbers and returns a number.
+
+- Now, let's mimic a consumer of the library. Create a `src` folder (on the same level as the `lib` folder) with an `index.ts` file.
+
+- Import and consume the library in the `index.ts` file:
+
+```ts
+import { sumArray } from "../lib/sum";
+
+console.log(sumArray([1, 2, 3]));
+```
+
+You wil observe that we are already getting type safety. For instance, try to provide a string argument to the function:
+
+```ts
+console.log(sumArray("hi"));
+// Error: Argument of type 'string' is not assignable to parameter of type 'number[]'.
+```
+
+This is thanks to the type we declared in the `sum.d.ts` file.
+
+- Create a tsconfig.json file with minimal config options:
+
+```json
+{
+  "compilerOptions": {
+    "target": "ES2019",
+    "module": "CommonJS",
+    "outDir": "dist",
+    "rootDir": ".",
+    "esModuleInterop": true,
+    "allowJs": true,
+    "moduleResolution": "node",
+    "strict": true,
+    "skipLibCheck": true
+  },
+  "include": ["src/**/*", "lib/**/*"]
+}
+```
+
+- Install TypeScript as a project dependency:
+
+```bash
+npm install --save-dev typescript
+```
+
+Compile:
+
+```bash
+npx tsc
+```
+
+> SideNote: In case you're wondering how `npx tsc` differs from `tsc`: when you run `tsc`, you're running the global TypeScript compiler (the version installed with `npm install -g typescript`) instead of the installation that matches your project's version. See [setup](03-setup.md?id=setup).
+
+You will notice that the files are compiled to a `dist` folder (what we specified in the `outDir` in the tsconfig)
+
+- Run the compiled JavaScript:
+
+```bash
+node dist/src/index.js
+
+# Output: 6
+```
+
+<b>Example 2. Letting TypeScript Generate `.d.ts` Files Automatically</b>
+
+We could also have a setup where our code is written in TypeScript and we just want to generate a `.d.ts` file for consumers. Instead of writing it manually, we can have the compiler generate it for us:
+
+- Inside a new practice folder, create a `src` folder that contains a TypeScript file `sum.ts` with the function:
+
+```ts
+export function sumArray(arr: number[]): number {
+  return arr.reduce((prev, curr) => prev + curr, 0);
+}
+```
+
+- Create a tsconfig.json file to emit declarations:
+
+```json
+{
+  "compilerOptions": {
+    "target": "ES2019",
+    "module": "CommonJS",
+    "declaration": true,
+    "declarationDir": "dist/types",
+    "outDir": "dist",
+    "rootDir": "src",
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "strict": true
+  },
+  "include": ["src/**/*"]
+}
+```
+
+Key lines:
+
+(a) `"declaration": true` will generate the `.d.ts` files.
+
+(b) `"declarationDir": "dist/types"` is optional. It will put the declarations in a separate `types` folder. If omitted, TypeScript will place the `.d.ts` next to the `.js` in `dist`.
+
+(c) `"outDir": "dist"` will compile the JS files to the `dist` folder.
+
+- Run the commands:
+
+```
+npm install --save-dev typescript
+
+npx tsc
+```
+
+After `tsc` runs, you'll have:
+
+```
+dist/
+|__ sum.js
+|__ types/
+    |__ sum.d.ts
+```
+
+(If you used `declarationDir: dist/types`)
+
+The `sum.d.ts` contains the declaration:
+
+```ts
+export declare function sumArray(arr: number[]): number;
+```
+
+Now when someone installs your package in a TypeScript project, the `.d.ts` file will provide types.
+
+If you’re publishing your package, ensure your `package.json` includes the types or typings field:
+
+```json
+{
+  "name": "my-sum-lib",
+  "main": "dist/sum.js",
+  "types": "dist/types/sum.d.ts"
+}
+```
+
+This tells TypeScript consumers exactly where your type definitions live.

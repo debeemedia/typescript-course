@@ -45,8 +45,6 @@ npm install typescript --save-dev
 
 You can check your `package.json` file to confirm installation.
 
-PS: you are free to skip this step.
-
 4. When working with TypeScript, you may want to provide a configuration file that tells TypeScript how to behave. Run this:
 
 ```bash
