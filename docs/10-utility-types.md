@@ -1,6 +1,6 @@
 <h2 id= 'utility-types'>UTILITY TYPES</h2>
 
-[Back to Index](_sidebar.md)
+[Back to Index](../_sidebar.md)
 
 Utility Types essentially are built-in generic types used to manipulate or create new types based on existing types.
 Here are some commonly used utility types:
@@ -27,7 +27,7 @@ If you hover over `person.email` in the function, you will see that TypeScript i
 
 <h3 id= 'required'>Required</h3>
 
-[Back to Index](_sidebar.md) | [Back to Section](#utility-types)
+[Back to Index](../_sidebar.md) | [Back to Section](#utility-types)
 
 Required Utility Type is sort of the opposite of Partial Utility Type. It makes all the properties of `Type` required:
 
@@ -56,7 +56,7 @@ const person: Person = {
 
 <h3 id= 'readonly'>Readonly</h3>
 
-[Back to Index](_sidebar.md) | [Back to Section](#utility-types)
+[Back to Index](../_sidebar.md) | [Back to Section](#utility-types)
 
 Readonly Utility Type creates a type where all the properties of `Type` are `readonly`, meaning they cannot be modified once assigned a value:
 
@@ -108,7 +108,7 @@ And since we're on the subject of differences between `Readonly` and `as const`,
 
 <h3 id= 'pick'>Pick</h3>
 
-[Back to Index](_sidebar.md) | [Back to Section](#utility-types)
+[Back to Index](../_sidebar.md) | [Back to Section](#utility-types)
 
 Pick Utility Type is used to create a new type by picking a set of properties from an existing type:
 
@@ -147,7 +147,7 @@ const manager: Manager = {
 
 <h3 id= 'omit'>Omit</h3>
 
-[Back to Index](_sidebar.md) | [Back to Section](#utility-types)
+[Back to Index](../_sidebar.md) | [Back to Section](#utility-types)
 
 The Omit Utility Type is sort of the opposite of Pick Utility Type. It constructs a new type by picking all properties from an existing type but excluding a set of specified keys. It is useful when you want to include almost all of the properties on the existing type, so rather than listing all out, you just list the ones you don't want.
 
@@ -175,7 +175,7 @@ const personWithoutId: PersonWithoutId = {
 
 <h3 id= 'extract'>Extract</h3>
 
-[Back to Index](_sidebar.md) | [Back to Section](#utility-types)
+[Back to Index](../_sidebar.md) | [Back to Section](#utility-types)
 
 You can think of the Extract Utility Type as somewhat similar to the Pick Utility Type, but in this case, we're picking members of a union type, not keys of an object type:
 
@@ -198,7 +198,7 @@ And you also cannot use "Extract" in place of "Pick".
 
 <h3 id= 'exclude'>Exclude</h3>
 
-[Back to Index](_sidebar.md) | [Back to Section](#utility-types)
+[Back to Index](../_sidebar.md) | [Back to Section](#utility-types)
 
 You can think of the Exclude Utility Type as somewhat similar to Omit, and the direct opposite of Extract. It is used to select all the members of a union type, except the ones you specify:
 

@@ -1,6 +1,6 @@
 <h2 id= 'type-narrowing-and-type-guards'>TYPE NARROWING AND TYPE GUARDS</h2>
 
-[Back to Index](_sidebar.md)
+[Back to Index](../_sidebar.md)
 
 Type Narrowing is a way of checking and reducing the possible types of a value in a conditional block. When the particular type of a variable has been narrowed, operators, properties and methods specific to that type will be available. You can confidently perform safe and accurate operations without mindless type assertions that can lead to unexpected values or even runtime errors.
 
@@ -69,7 +69,7 @@ TypeError: param.trim is not a function
 
 <h3 id= 'array-is-array-type-guard'>Type Guard: Array.isArray</h3>
 
-[Back to Index](_sidebar.md) | [Back to Section](#type-narrowing-and-type-guards)
+[Back to Index](../_sidebar.md) | [Back to Section](#type-narrowing-and-type-guards)
 
 `Array.isArray` is a JavaScript built-in method that returns a boolean "true" if the value is an array and "false" otherwise. For example:
 
@@ -99,7 +99,7 @@ We use `Array.isArray` to check if `param` is an array. When the type is narrowe
 
 <h3 id= 'instance-of-type-guard'>Type Guard: instanceof</h3>
 
-[Back to Index](_sidebar.md) | [Back to Section](#type-narrowing-and-type-guards)
+[Back to Index](../_sidebar.md) | [Back to Section](#type-narrowing-and-type-guards)
 
 The `instanceof` operator is used to check if an object is an instance of a particular constructor function or class at runtime:
 
@@ -273,7 +273,7 @@ Note:
 
 <h3 id= 'in-type-guard'>Type Guard: in</h3>
 
-[Back to Index](_sidebar.md) | [Back to Section](#type-narrowing-and-type-guards)
+[Back to Index](../_sidebar.md) | [Back to Section](#type-narrowing-and-type-guards)
 
 Another runtime tool is the `in` operator which simply checks if a property exists in an object. This reflects JavaScript's duck-type behaviour: if it exists, fine; if not, throw an error. TypeScript then enforces this duck-typing at compile time, ensuring you get the error earlier.
 
@@ -302,7 +302,7 @@ function act(entity: Person | AI) {
 
 <h3 id= 'is-type-guard'>User-defined (Custom) Type Guard with: is</h3>
 
-[Back to Index](_sidebar.md) | [Back to Section](#type-narrowing-and-type-guards)
+[Back to Index](../_sidebar.md) | [Back to Section](#type-narrowing-and-type-guards)
 
 Unlike `typeof` or `instanceof` which are built into JavaScript, the `is` keyword is a TypeScript-only feature that lets you create user-defined or custom type guards. Here's how it works:
 
@@ -388,7 +388,7 @@ There is another alternative with "discriminated unions"; sometimes people prefe
 
 <h3 id= 'discriminated-unions'>Discriminated Unions</h3>
 
-[Back to Index](_sidebar.md) | [Back to Section](#type-narrowing-and-type-guards)
+[Back to Index](../_sidebar.md) | [Back to Section](#type-narrowing-and-type-guards)
 
 Discriminated Unions are also known as tagged unions. They provide another way to do type narrowing without writing custom type guards.
 
