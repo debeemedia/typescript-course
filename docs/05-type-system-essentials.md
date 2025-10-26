@@ -445,7 +445,7 @@ console.log(ArticleStatus[2]); // Error: A const enum member can only be accesse
 
 <h3 id= 'string-literal-unions-objects'>String Literal Unions from Objects</h3>
 
-[Back to Index](_sidebar.md) [Back to Section](#type-system-essentials)
+[Back to Index](_sidebar.md) | [Back to Section](#type-system-essentials)
 
 I want to demonstrate a lighter (lighter, in terms of not generating JavaScript code), and still type-sound, alternative to enums, but first, we will need to discuss `as const`, `typeof` and `keyof`, then see how we can combine all three.
 
