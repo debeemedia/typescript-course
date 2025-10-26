@@ -122,7 +122,7 @@ It is recommended practice to always use the strictest access modifier. If the p
 
 Why make a property or method private? <!-- todo -->
 
-<h4 id= 'difference-between-private-and-#'>Difference between `private` and `#`</h4>
+<h4 id= 'difference-between-private-and-hash-prefix'>Difference between `private` and `#`</h4>
 
 "private" access modifier is a TypeScript-only feature. It exists only at compile-time, meaning its restriction is only enforced when type checking. It does not exist in the emitted JavaScript code, as such, it can be bypassed by ignoring TypeScript (TypeScript comments will be discussed later).
 

@@ -210,7 +210,7 @@ If `as` silences the compiler, `as unknown as` gaslights the compiler. It is a d
 
 ```ts
 const whoAmI = "I am a string" as number;
-// Conversion of type 'string' to type 'number' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+// Error: Conversion of type 'string' to type 'number' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
 ```
 
 This, of course, is for safety reasons. But when we use `as unknown as`, we bypass this restriction:

@@ -37,7 +37,7 @@ tsc -v
 NB: "tsc" stands for TypeScript Compiler.
 You should see a version number like `Version 5.2.2`.
 
-2. Now, if you are working with TypeScript in a project, you would typically install it as a developer dependency within that project so that teammates can use the same version:
+3. Now, if you are working with TypeScript in a project, you would typically install it as a developer dependency within that project so that teammates can use the same version:
 
 ```bash
 npm install typescript --save-dev
@@ -45,7 +45,9 @@ npm install typescript --save-dev
 
 You can check your `package.json` file to confirm installation.
 
-3. When working with TypeScript, you may want to provide a configuration file that tells TypeScript how to behave. Run this:
+PS: you are free to skip this step.
+
+4. When working with TypeScript, you may want to provide a configuration file that tells TypeScript how to behave. Run this:
 
 ```bash
 npx tsc --init
@@ -55,7 +57,7 @@ The command above scaffolds a `tsconfig.json` file which specifies options that 
 
 NB: `tsc --init` will work as long as you have TypeScript installed globally, but it is recommended to run `npx tsc --init` as this generates the config based on the version of TypeScript installed in your project's `node_modules`.
 
-4. To create a file for practice, run:
+5. To create a file for practice, run:
 
 ```bash
 touch practice.ts
