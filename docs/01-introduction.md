@@ -1,6 +1,6 @@
 <h2 id= 'introduction'>INTRODUCTION TO TYPESCRIPT</h2>
 
-[Back to Index](../_sidebar.md)
+[Back to Index](./_sidebar.md)
 
 TypeScript is a superset of JavaScript. This means it was built on top of JavaScript's syntax and functionality. TypeScript is a statically-typed language, as opposed to JavaScript which is dynamically-typed. What does this mean?
 

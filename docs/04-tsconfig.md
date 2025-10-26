@@ -1,6 +1,6 @@
 <h3 id= 'tsconfig'>About the "tsconfig.json" File</h3>
 
-[Back to Index](../_sidebar.md)
+[Back to Index](./_sidebar.md)
 
 The `tsconfig.json` file specifies the root files and the compiler options required to compile the project. It's what tells the TypeScript compiler how to behave. Below is a snippet:
 

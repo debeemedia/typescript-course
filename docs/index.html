@@ -13,13 +13,9 @@
   <body>
     <div id="app">Loading...</div>
     <script>
-      const isGithub = location.hostname.includes("github.io");
-
       window.$docsify = {
         name: "TypeScript Course",
         loadSidebar: true,
-        relativePath: false,
-        basePath: isGithub ? "/typescript-course/" : "",
         repo: "debeemedia/typescript-course",
       };
     </script>
