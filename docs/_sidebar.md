@@ -73,4 +73,8 @@
   - [Exports](11-modules.md?id=exports)
   - [Imports](11-modules.md?id=imports)
   - [Type Declaration Files](11-modules.md?id=type-declaration-files)
-  <!-- typescript comments -->
+- [TYPESCRIPT DIRECTIVE COMMENTS](12-typescript-directive-comments.md?id=typescript-directive-comments)
+  - [@ts-expect-error](12-typescript-directive-comments.md?id=ts-expect-error)
+  - [@ts-ignore](12-typescript-directive-comments.md?id=ts-ignore)
+  - [@ts-nocheck](12-typescript-directive-comments.md?id=ts-nocheck)
+  - [@ts-check](12-typescript-directive-comments.md?id=ts-check)

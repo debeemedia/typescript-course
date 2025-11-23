@@ -51,7 +51,7 @@ console.log(returnSomething("halo"));
 // Property 'trim' does not exist on type 'number'.
 ```
 
-TypeScript will throw a compile-time error, which, if ignored (with "// @ts-ignore") <!-- todo: link here; discuss typescript ignore and expect error comments -->, will not cause any issue because the argument passed in is a string and the methods `trim()` and `toUpperCase()` are valid string methods.
+TypeScript will throw a compile-time error, which, if [ignored](12-typescript-directive-comments.md?id=typescript-directive-comments), will not cause any issue because the argument passed in is a string and the methods `trim()` and `toUpperCase()` are valid string methods.
 
 If we however pass in a number and ignore TypeScript's warning, we will get a runtime error:
 
