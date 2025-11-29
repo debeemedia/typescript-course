@@ -124,7 +124,7 @@ Why make a property or method private? <!-- todo -->
 
 <h4 id= 'difference-between-private-and-hash-prefix'>Difference between `private` and `#`</h4>
 
-"private" access modifier is a TypeScript-only feature. It exists only at compile-time, meaning its restriction is only enforced when type checking. It does not exist in the emitted JavaScript code, as such, it can be bypassed by ignoring TypeScript (TypeScript comments will be discussed later).
+"private" access modifier is a TypeScript-only feature. It exists only at compile-time, meaning its restriction is only enforced when type checking. It does not exist in the emitted JavaScript code, as such, it can be bypassed by "[ignoring](12-typescript-directive-comments.md?id=typescript-directive-comments)" TypeScript.
 
 "#" is a real JavaScript feature available since ES2022. It is actually enforced at runtime by the JavaScript engine, as such, any class property or method prefixed with "#" is truly private and can never be accessed outside of the class.
 

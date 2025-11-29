@@ -24,6 +24,7 @@
     - [Basic Function Types](05-type-system-essentials.md?id=basic-function-types)
     - [Asynchronous Functions](05-type-system-essentials.md?id=asynchronous-functions)
     - [Rest Parameters](05-type-system-essentials.md?id=rest-parameters)
+    - [Overloaded Functions](05-type-system-essentials.md?id=overloaded-functions)
   - [Special Types](05-type-system-essentials.md?id=special-types)
     - [`any`](05-type-system-essentials.md?id=any)
     - [`unknown`](05-type-system-essentials.md?id=unknown)

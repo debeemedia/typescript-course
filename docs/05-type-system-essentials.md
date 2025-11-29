@@ -1077,7 +1077,80 @@ console.log(result); // Output: 6
 
 Rest Parameters are a JavaScript feature (ES6), not exclusive to TypeScript. TypeScript just adds type annotations to rest parameters.
 
-<!-- todo: rest parameters; overloading -->
+<h4 id= 'overloaded-functions'>Overloaded Functions</h4>
+
+TypeScript allows what is known as Function Overloading. This is when a function can have multiple definitions, with each function definition having a different parameter list or return type. This construct as a whole is called an overloaded function. Below is an example:
+
+```ts
+function returnSomething(param1: string, param2: number): string; // Overload Signature
+function returnSomething(param1: number, param2: number): number; // Overload Signature
+
+// Implementation Signature
+function returnSomething(param1: unknown, param2: unknown) {
+  if (typeof param1 === "string" && typeof param2 === "number") {
+    return `${param2}: ${param1}`;
+  }
+
+  if (typeof param1 === "number" && typeof param2 === "number") {
+    return param1 / param2;
+  }
+
+  throw new Error("Invalid arguments");
+}
+```
+
+Our overloaded function has two "overload signatures". These signatures describe how the function can be called. They do not implement any logic; notice how they do not have an implementation block (`{}`).
+
+- The first signature accepts two arguments of `string` and `number` type respectively
+- The second signature accepts two arguments, both of `number` type.
+
+Below them is the "implementation signature" (you only provide one function implementation) which contains the logic for the overload signatures. This is where you conditionally handle the different argument combinations. In our example, we handle this and then throw an error for any possible combination that is not defined in an overload signature.
+
+> SideNote: [`unknown`](05-type-system-essentials.md?id=unknown) is a special type we use for the arguments in the implementation signature because it forces us to narrow types safely. This will be explained later on.
+
+We can call the function in any of two ways as defined by our overload signatures:
+
+```ts
+returnSomething("learning", 1);
+returnSomething(4, 2);
+```
+
+When you hover over the function calls, you will notice that TypeScript, based on the types of arguments passed in and the corresponding overload signature, correctly infers their return type: `string` and `number` respectively.
+
+If we call the function in a way that is not accounted for by any overload signature e.g with two `string` arguments:
+
+```ts
+returnSomething("learning", "typescript");
+```
+
+TypeScript immediately raises a compile-time error:
+
+```ts
+returnSomething("learning", "typescript");
+// Error: No overload matches this call.
+```
+
+Without TypeScript, code execution will eventually hit this fallback logic:
+
+```ts
+// ...
+throw new Error("Invalid arguments");
+```
+
+And an error will be thrown at runtime, crashing our program:
+
+```bash
+C:\Users\me\Desktop\typescript-tutorial\practice.js:14
+    throw new Error("Invalid arguments");
+    ^
+
+Error: Invalid arguments
+    at returnSomething
+```
+
+Function overloading is purely a TypeScript feature. When you run `tsc` and check the compiled `.js` file, you will notice that the overloaded signatures have been stripped away, leaving only the implementation signature.
+
+Function overloading is a powerful TypeScript feature and it's important to recognize it when you encounter it. But you'll probably often use [union types](05-type-system-essentials.md?id=union-intersection) in function arguments or [generic functions](09-generics.md?id=generic-functions) instead, because they are simpler, easier to maintain and expressive enough for most use cases. Overloads shine when different input shapes must produce different output types, and you want TypeScript to correctly infer that relationship at compile-time.
 
 <h3 id= 'special-types'>Special Types</h3>
 
@@ -1110,13 +1183,47 @@ if (typeof myVar === "number") {
 }
 ```
 
-You will notice, for instance, that in the conditional block checking if `myVar` is a string, properties available to string types like "length" become available. This is not available in the conditional block checking for number type. So TypeScript is still at work here. Also, if you try to do something like this without type narrowing, you will get an error:
+You will notice, for instance, that in the conditional block checking if `myVar` is a string, properties available to string types like "length" become available. This is not available in the conditional block checking for number type. So TypeScript is still at work here.
+
+Also, if you try to do something like this without type narrowing, you will get an error:
 
 ```ts
 const result = myVar + 1; // Error: 'myVar' is of type 'unknown'
 ```
 
-You will not get that error if you use "any" type, and this is why the "unknown" type is a safer choice.
+Or recall this example from our [Overloaded Functions](05-type-system-essentials.md?id=overloaded-functions) section:
+
+```ts
+function returnSomething(param1: unknown, param2: unknown) {
+  if (typeof param1 === "string" && typeof param2 === "number") {
+    return `${param2}: ${param1}`;
+  }
+
+  if (typeof param1 === "number" && typeof param2 === "number") {
+    return param1 / param2;
+  }
+
+  throw new Error("Invalid arguments");
+}
+```
+
+If, for instance, you do not perform type narrowing here:
+
+```ts
+// Lines commented out for effect
+
+// if (typeof param1 === "number" && typeof param2 === "number") {
+return param1 / param2;
+// }
+```
+
+You will get this error:
+
+```ts
+// Error: 'param1' is of type 'unknown'.
+```
+
+The `unknown` type forces us to narrow types safely. You will not get that error if you use "any" type, and this is why the "unknown" type is a safer choice.
 
 <h4 id= 'void'>`void`</h4>
 
