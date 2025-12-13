@@ -892,7 +892,6 @@ Below, we specify the type of the function's parameters, as well as the return t
 ```ts
 function greet(name: string): void {
   console.log(`Hello. My name is ${name}.`);
-  // Error: Parameter 'name' implicitly has an 'any' type
 }
 ```
 
