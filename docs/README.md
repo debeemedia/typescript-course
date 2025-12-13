@@ -36,7 +36,7 @@ You can:
 
 - View it directly on [GitHub Pages](https://debeemedia.github.io/typescript-course/)
 
-- Or read the blog version when published (coming soon)
+- Or read the blog version on [Hashnode](https://the-typescript-course.hashnode.dev/)
 
 Each major topic lives in its own `.md` file inside the `docs/` directory for easier navigation.
 
